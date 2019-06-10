@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Okt 2018 pada 13.41
--- Versi server: 10.1.34-MariaDB
--- Versi PHP: 7.2.8
+-- Waktu pembuatan: 10 Jun 2019 pada 05.26
+-- Versi server: 10.1.38-MariaDB
+-- Versi PHP: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_sma1`
+-- Database: `perpustakaan`
 --
 
 -- --------------------------------------------------------
@@ -67,8 +67,8 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`id_buku`, `judul`, `pengarang`, `penerbit`, `tahun_terbit`, `isbn`, `jumlah_buku`, `lokasi`, `tgl_buku_masuk`) VALUES
-('12', 'Framework YII', 'Badiyanto', 'Sucipto', '1988', '2352622', 16, 'Rak 4', '2017-08-24'),
-('2', 'Bahasa Inggris', 'Yudi jjj', 'Erlangga', '1989', '11355621', 2, 'Rak7', '2017-08-11');
+('12', 'Framework YII', 'Badiyanto', 'Sucipto', '1988', '2352622', 14, 'Rak 4', '2017-08-24'),
+('2', 'Bahasa Inggris', 'Yudi jjj', 'Erlangga', '1989', '11355621', 1, 'Rak7', '2017-08-11');
 
 -- --------------------------------------------------------
 
@@ -112,7 +112,10 @@ INSERT INTO `transaksi` (`id_transaksi`, `id_buku`, `nis`, `tgl_pinjam`, `tgl_ke
 (2, '12', 13445221, '17-10-2018', '24-10-2018', 'Kembali'),
 (3, '12', 13445221, '17-10-2018', '24-10-2018', 'Kembali'),
 (4, '2', 13445221, '17-10-2018', '24-10-2018', 'Kembali'),
-(5, '12', 13445221, '15-10-2018', '16-10-2018', 'Kembali');
+(5, '12', 13445221, '15-10-2018', '16-10-2018', 'Kembali'),
+(6, '12', 13445221, '10-06-2019', '17-06-2019', 'Pinjam'),
+(7, '2', 13445221, '10-06-2019', '17-06-2019', 'Pinjam'),
+(8, '12', 13445221, '10-06-2019', '17-06-2019', 'Pinjam');
 
 --
 -- Indexes for dumped tables
@@ -156,7 +159,7 @@ ALTER TABLE `denda`
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_transaksi` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

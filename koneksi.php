@@ -3,7 +3,7 @@ error_reporting (E_ALL ^ E_DEPRECATED);
  $host = "localhost";
  $user = "root";
  $pass = "";
- $dbName = "db_sma1";
+ $dbName = "perpustakaan";
 
  $kon = mysqli_connect($host, $user, $pass);
  if (!$kon)
@@ -11,4 +11,3 @@ error_reporting (E_ALL ^ E_DEPRECATED);
 
  $hasil = mysqli_select_db($kon, $dbName);
 		if (!$hasil) die ("Gagal Konek Database");
-?>
